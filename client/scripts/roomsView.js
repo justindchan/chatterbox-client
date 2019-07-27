@@ -13,8 +13,16 @@ var RoomsView = {
     });
   },
 
-  renderRoom: function() {
+  render: function(msg) {
+    // var room = RoomsView.render(msg);
+    // $('#chats').append(room);
 
+  },
+
+  renderRoom: function(msg) {
+    // Parse.create(msg);
+    // var html = RoomsView.render(msg);
+    // $('#chats').prepend(html);
   }
 
 };

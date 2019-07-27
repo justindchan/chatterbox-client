@@ -7,7 +7,9 @@ var MessagesView = {
       // examine the response from the server request:
       console.log(data)
       for (var i = 0; i < data.results.length; i++) {
-        this.render(data.results[i])
+        if (data.results[i].roomname === true) {
+          this.render(data.results[i])
+        }
       }
       console.log(data);
     });
@@ -20,7 +22,7 @@ var MessagesView = {
   },
 
   renderMessage: function(msg) {
-    Parse.create(msg);
+    // Parse.create(msg);
     var html = MessageView.render(msg);
     $('#chats').prepend(html);
   }
