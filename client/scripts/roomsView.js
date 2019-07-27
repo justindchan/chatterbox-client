@@ -6,20 +6,27 @@ var RoomsView = {
   initialize: function() {
     Parse.readAll((data) => {
       // examine the response from the server request:
+      var uniqRooms = [];
       for (var i = 0; i < data.results.length; i++) {
-        this.renderRoom(data.results[i])
+        if (data.results[i].roomname !== undefined && data.results[i].text !== undefined) {
+          this.render(data.results[i]);
+        }
       }
-      // console.log(data.results);
     });
   },
 
-  render: function(msg) {
-    // var room = RoomsView.render(msg);
-    // $('#chats').append(room);
+  render: function(room) {
+    // room display
+    
+
+    var roomname = Rooms.render(room);
+    $('#rooms select').append(roomname);
 
   },
 
-  renderRoom: function(msg) {
+  renderRoom: function(room) {
+    // room creation
+
     // Parse.create(msg);
     // var html = RoomsView.render(msg);
     // $('#chats').prepend(html);

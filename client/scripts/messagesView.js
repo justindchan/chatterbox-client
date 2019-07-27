@@ -7,7 +7,7 @@ var MessagesView = {
       // examine the response from the server request:
       console.log(data)
       for (var i = 0; i < data.results.length; i++) {
-        if (data.results[i].roomname === true) {
+        if (data.results[i].roomname !== undefined && data.results[i].text !== undefined) {
           this.render(data.results[i])
         }
       }

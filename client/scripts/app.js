@@ -1,3 +1,11 @@
+// var refresh = function () {
+//   //FormView.initialize();
+//   //RoomsView.initialize();
+//   MessagesView.initialize();
+//   setTimeout(refresh, 5000);
+// };
+
+
 var App = {
 
   $spinner: $('.spinner img'),
@@ -10,10 +18,12 @@ var App = {
     FormView.initialize();
     RoomsView.initialize();
     MessagesView.initialize();
+    // refresh();
 
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+
 
   },
 
