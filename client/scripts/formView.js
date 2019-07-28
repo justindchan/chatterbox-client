@@ -9,7 +9,7 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    var message = new Messages('Master Chafe', $('#message').val(), $('#rooms select').val());
+    var message = new Messages(decodeURI(App.username), $('#message').val(), $('#rooms select').val());
     Parse.create(message);
     console.log($('#rooms select').val()); 
     // console.log(message);
