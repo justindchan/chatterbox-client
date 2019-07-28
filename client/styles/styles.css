@@ -1,18 +1,20 @@
 body {
     background: #eee;
-    text-align: center;
+    background: url(http://giphygifs.s3.amazonaws.com/media/qULPWjg3SIuTm/giphy.gif) no-repeat center center fixed;
+    background-size: cover;
     padding: 0 25px;
     font-family: arial, sans-serif;
+    color: #f2f2f2   ;
 }
 
 #main, #chats {
     width: 500px;
     margin: auto;
     text-align: left;
-    background: white;
-    padding: 50px 60px;
+    /*background: white;*/
+    /*padding: 50px 60px;
     border: solid #ddd;
-    border-width: 0 1px 1px 1px;
+    border-width: 0 1px 1px 1px;*/
 }
 
 #main h1 {
@@ -62,11 +64,12 @@ form input[type=text] {
 .chat {
     padding: 5px;
     margin-bottom: 5px;
-    background-color: #eee;
+    /*background-color: #eee;*/
 }
 
 .chat .username {
-    font-weight: 800;
+    font-weight: 900;
+    /*color: #f2f2f2*/   
 }
 
 .chat:hover {

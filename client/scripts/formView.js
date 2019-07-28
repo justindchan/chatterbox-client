@@ -9,9 +9,9 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    var message = new Messages('Master Chief', $('#message').val(), 'The WartHog');
+    var message = new Messages('Master Chafe', $('#message').val(), $('#rooms select').val());
     Parse.create(message);
-
+    console.log($('#rooms select').val()); 
     // console.log(message);
     MessagesView.renderMessage(message);
     console.log('click!');

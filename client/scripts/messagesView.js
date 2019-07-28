@@ -5,13 +5,13 @@ var MessagesView = {
   initialize: function() {
     Parse.readAll((data) => {
       // examine the response from the server request:
-      console.log(data)
+      // console.log(data)
       for (var i = 0; i < data.results.length; i++) {
         if (data.results[i].roomname !== undefined && data.results[i].text !== undefined) {
           this.render(data.results[i])
         }
       }
-      console.log(data);
+      // console.log(data);
     });
   },
 
@@ -22,7 +22,6 @@ var MessagesView = {
   },
 
   renderMessage: function(msg) {
-    // Parse.create(msg);
     var html = MessageView.render(msg);
     $('#chats').prepend(html);
   }
